@@ -31,10 +31,10 @@ class AboutObjects < Neo::Koan
   end
 
   def test_small_integers_have_fixed_ids
-    assert_equal ((0<<1) + 1), 0.object_id
-    assert_equal ((1 << 1) + 1), 1.object_id
-    assert_equal ((2 << 1) + 1), 2.object_id
-    assert_equal ((100 << 1) + 1), 100.object_id
+    assert_equal 0<<1 + 1, 0.object_id
+    assert_equal 1 << 1 + 1, 1.object_id
+    assert_equal 2 << 1 + 1, 2.object_id
+    assert_equal 100 << 1 + 1, 100.object_id
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
